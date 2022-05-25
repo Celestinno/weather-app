@@ -3,12 +3,6 @@
   padding: 0;
   font-family: 'Koulen', cursive;
 }
-::placeholder{
-  color: rgba(255, 255, 255, 0.747);
-  opacity: 0.7;
-
-
-}
 body{
   background-image: linear-gradient(to left, blue, purple);
   background-size: 100%;
@@ -46,6 +40,10 @@ input{
   border-bottom: 3px solid rgba(255, 255, 255, 0.747);
   color: rgba(255, 255, 255, 0.747);
   caret-color: white;
+}
+input::placeholder{
+  color: rgba(255, 255, 255, 0.747);
+  opacity: 0.7;
 }
 input:focus{
   outline: none;
