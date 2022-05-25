@@ -133,3 +133,27 @@ button:hover{
   font-size: 25px;
 
 }
+@media only screen and (max-width:900px){
+  button{
+    right: 23%;
+  }
+}
+@media only screen and (max-width:700px){
+  button{
+    right: 20%;
+  }
+}
+@media only screen and (max-width:400px){
+  button{
+    right: 16%;
+  }
+}
+@media only screen and (max-width:550px){
+  .weather-icon>img{
+    height: 100px;
+    width: 100px;
+  }
+  .weather-container{
+    width: 300px;
+  }
+}
