@@ -156,4 +156,7 @@ button:hover{
   .weather-container{
     width: 300px;
   }
+  ::placeholder{
+    font-size: 20px;
+  }
 }
