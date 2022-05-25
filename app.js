@@ -20,22 +20,37 @@ btn.addEventListener('click',() =>{
     display.innerHTML = "";
     let panel = document.createElement('div');
     let temp = document.createElement('div');
-    let icon = document.createElement('div');    
+    let icon = document.createElement("div");  
+    let summary = document.createElement('div');  
     display.appendChild(panel);  
     display.appendChild(icon);  
     display.appendChild(temp);
+    display.appendChild(summary);
     panel.innerHTML ="<p>" + response.location.name + "</p>";
     panel.classList.add('weather-panel');
     icon.classList.add('weather-icon');
     temp.classList.add("weather-temp");
+    summary.classList.add("weather-summary");
     if(response.current.precip_mm >= 0.5){
       icon.innerHTML = "<img src='/images/rain.png'>";
+      if(response.current.precip_mm>=0.5 && response.current.precip_mm<4){
+        summary.innerHTML = "<p>Light Rain</p>"
+      }
+      else if (response.current.precip_mm>=4 && response.current.precip_mm<8){
+        summary.innerHTML = "<p>Moderate Rain</p>"
+      }
+      else{
+        summary.innerHTML = "<p>Heavy Rain</p>"
+      }
+      
     }
     else if (response.current.cloud > 25 && response.current.precip_mm <0.5){
       icon.innerHTML = "<img src='/images/cloud.png'>";
+      summary.innerHTML = "<p>Clouded Skies</p>"
     }
     else{
       icon.innerHTML = "<img src='/images/sun.png'>";
+      summary.innerHTML = "<p>Sunny Skies</p>"
     }
     temp.innerHTML = "<p>"+ response.current.temp_c + "°C </p>";
   })
