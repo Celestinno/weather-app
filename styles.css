@@ -33,10 +33,10 @@ input{
   margin-left: 30%;
   margin-right: 30%;
   width: 40%;
-  padding: 10px;
+  padding: 0px;
   background-color: transparent;
   border: none;
-  font-size: 20px;
+  font-size: 30px;
   border-bottom: 3px solid rgba(255, 255, 255, 0.747);
   color: rgba(255, 255, 255, 0.747);
   caret-color: white;
@@ -64,7 +64,7 @@ button{
   background-color: white;
   border-radius: 40%;
   cursor: pointer;  
-  margin-top: 10px;
+  margin-top: 15px;
 }
 button:hover{
   background-color: rgba(255, 255, 255, 0.747);
@@ -72,11 +72,13 @@ button:hover{
 .weather-container{
   padding: 0;
   display: grid;
+  row-gap: 20px;
+  column-gap: 20px;
   grid-template-columns: 1fr 1fr;
   justify-content: center;
   margin: auto;
-  width: 450px;
-  height: 300px;
+  width: 400px;
+  height: 250px;
   background-color:rgba(255, 255, 255, 0.747) ;
   color: black;
   margin-top: 30px;
@@ -94,16 +96,25 @@ button:hover{
   grid-column-end: 3;
 }
 .weather-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   bottom: 10px;
   left: 20px;
+  object-fit: cover;
 
 }
+.weather-icon>img{
+  height: 150px;
+  width: 150px;
+  object-fit: contain;
+}
 .weather-temp{
-  position: relative;
+  display: flex;
+  align-items: center;
   font-size: 70px;
-  padding-left: 30%;
-  padding-right: 30%;
-  right: 50px;
+  height: 100%;
+  justify-content: center;
 
 }

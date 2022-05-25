@@ -20,7 +20,7 @@ btn.addEventListener('click',() =>{
     display.innerHTML = "";
     let panel = document.createElement('div');
     let temp = document.createElement('div');
-    let icon = document.createElement('img');    
+    let icon = document.createElement('div');    
     display.appendChild(panel);  
     display.appendChild(icon);  
     display.appendChild(temp);
@@ -29,16 +29,13 @@ btn.addEventListener('click',() =>{
     icon.classList.add('weather-icon');
     temp.classList.add("weather-temp");
     if(response.current.precip_mm >= 0.5){
-      icon.src = 'https://cdn-icons-png.flaticon.com/512/116/116251.png';
-      icon.style="  width: 200px; height: 200px;"
+      icon.innerHTML = "<img src='/images/rain.png'>";
     }
     else if (response.current.cloud > 25 && response.current.precip_mm <0.5){
-      icon.src = 'https://uxwing.com/wp-content/themes/uxwing/download/27-weather/cloudy.png';
-      icon.style="  width: 200px; height: 150px;"
+      icon.innerHTML = "<img src='/images/cloud.png'>";
     }
     else{
-      icon.src = 'https://www.iconpacks.net/icons/2/free-sun-icon-3337-thumb.png';
-      icon.style="  width: 200px; height: 200px;"
+      icon.innerHTML = "<img src='/images/sun.png'>";
     }
     temp.innerHTML = "<p>"+ response.current.temp_c + "°C </p>";
   })
