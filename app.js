@@ -32,7 +32,7 @@ btn.addEventListener('click',() =>{
     temp.classList.add("weather-temp");
     summary.classList.add("weather-summary");
     if(response.current.precip_mm >= 0.5){
-      icon.innerHTML = "<img src='/images/rain.png'>";
+      icon.innerHTML = "<img src='images/rain.png'>";
       if(response.current.precip_mm>=0.5 && response.current.precip_mm<4){
         summary.innerHTML = "<p>Light Rain</p>"
       }
@@ -45,11 +45,11 @@ btn.addEventListener('click',() =>{
       
     }
     else if (response.current.cloud > 25 && response.current.precip_mm <0.5){
-      icon.innerHTML = "<img src='/images/cloud.png'>";
+      icon.innerHTML = "<img src='images/cloud.png'>";
       summary.innerHTML = "<p>cloudy</p>"
     }
     else{
-      icon.innerHTML = "<img src='/images/sun.png'>";
+      icon.innerHTML = "<img src='images/sun.png'>";
       summary.innerHTML = "<p>Sunny</p>"
     }
     temp.innerHTML = "<p>"+ response.current.temp_c + "°C </p>";
