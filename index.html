@@ -7,14 +7,15 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Weather App</title>
   <link rel="stylesheet" href="styles.css">
-  <script defer src="spp.js"></script>
+  <script defer src="app.js"></script>
 </head>
 <body>
   <img class="background" src="https://media.giphy.com/media/dI3D3BWfDub0Q/giphy.gif" alt="">
   <h1>WEATHER NOW</h1>
   <div class="input-bg">
-    <input type="text" onkeyup="this.value = this.value.toUpperCase();">
-    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+    <input data-weather="text" type="text" onkeyup="this.value = this.value.toUpperCase();">
+    <button data-weather="submit"><i class="fa-solid fa-magnifying-glass"></i></button>    
   </div>  
+  <div data-weather="display" class="weather-container"></div>
 </body>
 </html>
