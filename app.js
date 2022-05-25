@@ -46,11 +46,11 @@ btn.addEventListener('click',() =>{
     }
     else if (response.current.cloud > 25 && response.current.precip_mm <0.5){
       icon.innerHTML = "<img src='/images/cloud.png'>";
-      summary.innerHTML = "<p>Clouded Skies</p>"
+      summary.innerHTML = "<p>cloudy</p>"
     }
     else{
       icon.innerHTML = "<img src='/images/sun.png'>";
-      summary.innerHTML = "<p>Sunny Skies</p>"
+      summary.innerHTML = "<p>Sunny</p>"
     }
     temp.innerHTML = "<p>"+ response.current.temp_c + "°C </p>";
   })

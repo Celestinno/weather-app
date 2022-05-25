@@ -78,7 +78,7 @@ button:hover{
   justify-content: center;
   margin: auto;
   width: 400px;
-  height: 300px;
+  height: 280px;
   background-color:rgba(255, 255, 255, 0.747) ;
   color: black;
   margin-top: 30px;
@@ -95,11 +95,13 @@ button:hover{
   grid-column-start: 1 ;
   grid-column-end: 3;
 }
+.weather-panel>p{
+  margin-bottom: 10px;
+}
 .weather-icon{
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
   bottom: 10px;
   left: 20px;
   object-fit: cover;
